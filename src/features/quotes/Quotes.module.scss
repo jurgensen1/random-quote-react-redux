@@ -1,0 +1,57 @@
+@use '../../variables' as v;
+#quotes {
+    width: 100%;
+    margin: 0;
+}
+
+#text {
+    width: 100%;
+    line-height: 1.75;
+    letter-spacing: .05em;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--text-body-color);
+}
+#textError {
+    width: 100%;
+    line-height: 1.75;
+    letter-spacing: .05em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-error-color);
+}
+
+#author, #quoteInfo {
+    width: 100%;
+    font-size: 18px;
+    text-align: right;
+}
+
+#quoteInfo{
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    margin-top: 60px;
+}
+#quoteNumberInput {
+    color: var(--text-body-color);
+    background-color: var(--background-color);
+}
+#tweetButton {
+    margin: 0;
+    font-family: Arial;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    font-weight: bold;
+    background-color: var(--text-body-color);
+    position: relative;
+    top: 15px;
+    left: calc(50% - 35px);
+    i {
+        color: var(--background-color);
+    }
+}

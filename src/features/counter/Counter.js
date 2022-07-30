@@ -1,67 +1,64 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
-  selectCount,
+    decrement,
+    increment,
+    randomQuote,
+    handleChange
 } from './counterSlice';
-import styles from './Counter.module.css';
+import styles from './Counter.module.scss';
 
-export function Counter() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
 
-  const incrementValue = Number(incrementAmount) || 0;
 
-  return (
-    <div>
-      <div className={styles.row}>
+export function LeftArrow() {
+    const dispatch = useDispatch();
+    return (
         <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
+            id={styles.decrement}
+            aria-label="Previous Quote"
+            onClick={() => dispatch(decrement())}
         >
-          -
-        </button>
-        <span className={styles.value}>{count}</span>
+            <i class="fas fa-angle-left fa-2x"></i>
+        </button>)
+}
+export function RightArrow() {
+    const dispatch = useDispatch();
+    return (
         <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+            id={styles.increment}
+            aria-label="Next Quote"
+            onClick={() => dispatch(increment())}
         >
-          +
-        </button>
-      </div>
-      <div className={styles.row}>
-        <input
-          className={styles.textbox}
-          aria-label="Set increment amount"
-          value={incrementAmount}
-          onChange={(e) => setIncrementAmount(e.target.value)}
-        />
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
-        >
-          Add Amount
-        </button>
-        <button
-          className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync(incrementValue))}
-        >
-          Add Async
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementIfOdd(incrementValue))}
-        >
-          Add If Odd
-        </button>
-      </div>
-    </div>
-  );
+            <i class="fas fa-angle-right fa-2x"></i>
+        </button>)
+}
+
+export function QuoteNumber(props) {
+    const dispatch = useDispatch();
+    return (<input
+        id={styles.inlineTextbox}
+        type='number'
+        min={1}
+        max={1643}
+        step="1"
+        aria-label="Input a quote number"
+        value={props.value + 1}
+        placeholder={props.value + 1}
+        onChange={(event) => dispatch(handleChange(event.target.value))}
+    />)
+}
+
+export function Counter(props) {
+    const dispatch = useDispatch();
+
+    return (
+        <div id={styles.buttonWrapper}>
+            <button
+                id={styles.newQuote}
+                onClick={() => dispatch(randomQuote())}
+            >
+                Random Quote
+            </button>
+        </div>
+    );
 }
