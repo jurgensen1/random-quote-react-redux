@@ -6,7 +6,6 @@ import {
     setStateData
 } from './quotesSlice';
 
-
 export class Quotes extends React.Component {
     constructor(props) {
         super(props);
@@ -40,9 +39,6 @@ export class Quotes extends React.Component {
           input: ''
         });
     }
-    // componentDidUpdate() {
-    //     this.props.submitMessage;
-    // }
     render() {
         const { DataisLoaded } = this.state;
         if (!DataisLoaded)
