@@ -1,7 +1,8 @@
 # Project: Random Quote Machine
 In partial completion of freeCodeCamp’s front-end framework certificate   
-program.
-Makes use of React, Redux, SASS, and an Open API for the quotes (compiled by freeCodeCamp). 
+program.  
+Makes use of React, Redux, SASS, and an Open API for the quotes  
+(compiled by freeCodeCamp). 
 
 ## Live branch (gh-pages)
 * To view the static-page verison of this app go to the following link:  
