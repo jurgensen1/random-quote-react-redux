@@ -6,7 +6,7 @@
     display: flex;
 }
 
-#newQuote {
+.newQuote {
     font-family: Arial;
     font-size: 14px;
     text-decoration: none;
@@ -16,8 +16,8 @@
     width: 100px;
     font-weight: bold;
     margin: 0;
-    background-color: var(--background-color);
-    color: var(--text-body-color);
+    background-color:  var(--text-body-color);
+    color: var(--background-color) ;
     position: relative;
     top: 0;
     left: calc(50% - 50px);

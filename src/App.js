@@ -6,8 +6,8 @@ import { useSelector} from 'react-redux';
 
 function App(props) {
   return (
-    <div>
-        <div id="quote-box">
+    <div id="quote-box">
+        <div >
             <Quotes 
                 value={useSelector((state) => state.counter.value)}  
             />
@@ -15,7 +15,6 @@ function App(props) {
         <div id="counter">
             <Counter 
                 value={useSelector((state) => state.counter.value)}
-                // message={useSelector((state) => state.messages.messages)}
             />
         </div>
     </div>

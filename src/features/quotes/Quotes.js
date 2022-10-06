@@ -76,8 +76,8 @@ export class Quotes extends React.Component {
                             <i class="fa-brands fa-twitter fa-2x"></i>
                         </button>
                     </a>
-                    <div id={styles.text}><p>{this.state.items[this.props.value].text}</p></div>
-                    <div id={styles.author}><p>— {this.state.items[this.props.value].author !== null ? this.state.items[this.props.value].author : "Anonymous"}</p></div>
+                    <div className={styles.text} id="text"><p>{this.state.items[this.props.value].text}</p></div>
+                    <div className={styles.author} id="author" ><p>— {this.state.items[this.props.value].author !== null ? this.state.items[this.props.value].author : "Anonymous"}</p></div>
                     <div id={styles.quoteInfo}><LeftArrow /><p>Quote <QuoteNumber value={this.props.value} id={styles.quoteNumberInput} /> of {this.state.items.length}</p><RightArrow /></div>
                 </div>
             );

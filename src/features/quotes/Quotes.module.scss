@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-#text {
+.text {
     width: 100%;
     line-height: 1.75;
     letter-spacing: .05em;
@@ -21,7 +21,7 @@
     color: var(--text-error-color);
 }
 
-#author, #quoteInfo {
+.author, #quoteInfo {
     width: 100%;
     font-size: 18px;
     text-align: right;

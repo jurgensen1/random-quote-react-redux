@@ -54,7 +54,8 @@ export function Counter(props) {
     return (
         <div id={styles.buttonWrapper}>
             <button
-                id={styles.newQuote}
+                id="new-quote"
+                className={styles.newQuote}
                 onClick={() => dispatch(randomQuote())}
             >
                 Random Quote
